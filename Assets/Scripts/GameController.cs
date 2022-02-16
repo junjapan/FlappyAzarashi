@@ -74,6 +74,8 @@ public class GameController : MonoBehaviour
 
         stateText.gameObject.SetActive(false);
         stateText.text = "";
+        //ブレークポイントの作成
+        //Debug.Break();
     }
 
     void GameOver()
