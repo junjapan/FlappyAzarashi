@@ -45,6 +45,12 @@ public class AzarashiController : MonoBehaviour
         {
             return;
         }
+
+        if (rb2d.isKinematic)
+        {
+            return;
+        }
+
         rb2d.velocity = new Vector2(0.0f, flapVelocity);
     }
 
@@ -75,5 +81,10 @@ public class AzarashiController : MonoBehaviour
             return;
         }
         isDead = true;
+    }
+
+    public void SetSteerActive(bool active)
+    {
+        rb2d.isKinematic = !active;
     }
 }
